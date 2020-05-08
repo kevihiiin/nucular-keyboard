@@ -1,0 +1,65 @@
+Hinweis: Erstelle Sicherungskopie von Datei "/home/kevin/Projekte/Electronics/ThinkPad_Keyboard_Adapter/Hardware/sym-lib-table" in Datei "/home/kevin/Projekte/Electronics/ThinkPad_Keyboard_Adapter/Hardware/rescue-backup/sym-lib-table-2020-05-08-23-33-59".
+Hinweis: Erstelle Sicherungskopie von Datei "/home/kevin/Projekte/Electronics/ThinkPad_Keyboard_Adapter/Hardware/nucular-keyboard.sch" in Datei "/home/kevin/Projekte/Electronics/ThinkPad_Keyboard_Adapter/Hardware/rescue-backup/nucular-keyboard-2020-05-08-23-33-59.sch".
+Hinweis: Erstelle Sicherungskopie von Datei "/home/kevin/Projekte/Electronics/ThinkPad_Keyboard_Adapter/Hardware/nucular-keyboard.pro" in Datei "/home/kevin/Projekte/Electronics/ThinkPad_Keyboard_Adapter/Hardware/rescue-backup/nucular-keyboard-2020-05-08-23-33-59.pro".
+Hinweis: Erstelle Sicherungskopie von Datei "/home/kevin/Projekte/Electronics/ThinkPad_Keyboard_Adapter/Hardware/nucular-keyboard-cache.lib" in Datei "/home/kevin/Projekte/Electronics/ThinkPad_Keyboard_Adapter/Hardware/rescue-backup/nucular-keyboard-cache-2020-05-08-23-33-59.lib".
+Hinweis: Erstelle Sicherungskopie von Datei "/home/kevin/Projekte/Electronics/ThinkPad_Keyboard_Adapter/Hardware/nucular-keyboard-rescue.lib" in Datei "/home/kevin/Projekte/Electronics/ThinkPad_Keyboard_Adapter/Hardware/rescue-backup/nucular-keyboard-rescue-2020-05-08-23-33-59.lib".
+Hinweis: Erstelle Sicherungskopie von Datei "/home/kevin/Projekte/Electronics/ThinkPad_Keyboard_Adapter/Hardware/nucular-keyboard-rescue.dcm" in Datei "/home/kevin/Projekte/Electronics/ThinkPad_Keyboard_Adapter/Hardware/rescue-backup/nucular-keyboard-rescue-2020-05-08-23-33-59.dcm".
+Hinweis: Füge Bibliothek "nucular-keyboard-rescue", Datei "${KIPRJMOD}/nucular-keyboard-rescue.lib" der Bauteilbibliothekstabelle des Projektes hinzu.
+Hinweis: Füge Bibliothek "000-Components", Datei "${KIPRJMOD}/000-Components.lib" der Bauteilbibliothekstabelle des Projektes hinzu.
+Bauteilsymbol "VCC" wurde der Bibliothek "power" zugeordnet.
+Bauteilsymbol "GND" wurde der Bibliothek "power" zugeordnet.
+Bauteilsymbol "VCC" wurde der Bibliothek "power" zugeordnet.
+Bauteilsymbol "C" wurde der Bibliothek "nucular-keyboard-rescue" zugeordnet.
+Bauteilsymbol "C" wurde der Bibliothek "nucular-keyboard-rescue" zugeordnet.
+Bauteilsymbol "GND" wurde der Bibliothek "power" zugeordnet.
+Bauteilsymbol "GND" wurde der Bibliothek "power" zugeordnet.
+Bauteilsymbol "VCC" wurde der Bibliothek "power" zugeordnet.
+Bauteilsymbol "CONN_01X16" wurde der Bibliothek "nucular-keyboard-rescue" zugeordnet.
+Bauteilsymbol "CONN_01X03" wurde der Bibliothek "nucular-keyboard-rescue" zugeordnet.
+Bauteilsymbol "GND" wurde der Bibliothek "power" zugeordnet.
+Bauteilsymbol "GND" wurde der Bibliothek "power" zugeordnet.
+Bauteilsymbol "GND" wurde der Bibliothek "power" zugeordnet.
+Bauteilsymbol "VCC" wurde der Bibliothek "power" zugeordnet.
+Bauteilsymbol "TEST_1P" wurde der Bibliothek "nucular-keyboard-rescue" zugeordnet.
+Bauteilsymbol "TEST_1P" wurde der Bibliothek "nucular-keyboard-rescue" zugeordnet.
+Bauteilsymbol "TEST_1P" wurde der Bibliothek "nucular-keyboard-rescue" zugeordnet.
+Bauteilsymbol "TEST_1P" wurde der Bibliothek "nucular-keyboard-rescue" zugeordnet.
+Bauteilsymbol "GND" wurde der Bibliothek "power" zugeordnet.
+Bauteilsymbol "VCC" wurde der Bibliothek "power" zugeordnet.
+Bauteilsymbol "GND" wurde der Bibliothek "power" zugeordnet.
+Bauteilsymbol "R" wurde der Bibliothek "nucular-keyboard-rescue" zugeordnet.
+Bauteilsymbol "R" wurde der Bibliothek "nucular-keyboard-rescue" zugeordnet.
+Bauteilsymbol "R" wurde der Bibliothek "nucular-keyboard-rescue" zugeordnet.
+Bauteilsymbol "R" wurde der Bibliothek "nucular-keyboard-rescue" zugeordnet.
+Bauteilsymbol "R" wurde der Bibliothek "nucular-keyboard-rescue" zugeordnet.
+Bauteilsymbol "R" wurde der Bibliothek "nucular-keyboard-rescue" zugeordnet.
+Bauteilsymbol "R" wurde der Bibliothek "nucular-keyboard-rescue" zugeordnet.
+Bauteilsymbol "R" wurde der Bibliothek "nucular-keyboard-rescue" zugeordnet.
+Bauteilsymbol "C" wurde der Bibliothek "nucular-keyboard-rescue" zugeordnet.
+Bauteilsymbol "GND" wurde der Bibliothek "power" zugeordnet.
+Bauteilsymbol "GND" wurde der Bibliothek "power" zugeordnet.
+Bauteilsymbol "GND" wurde der Bibliothek "power" zugeordnet.
+Bauteilsymbol "GND" wurde der Bibliothek "power" zugeordnet.
+Bauteilsymbol "GND" wurde der Bibliothek "power" zugeordnet.
+Bauteilsymbol "GND" wurde der Bibliothek "power" zugeordnet.
+Bauteilsymbol "C" wurde der Bibliothek "nucular-keyboard-rescue" zugeordnet.
+Bauteilsymbol "C" wurde der Bibliothek "nucular-keyboard-rescue" zugeordnet.
+Bauteilsymbol "USB_OTG" wurde der Bibliothek "nucular-keyboard-rescue" zugeordnet.
+Bauteilsymbol "C" wurde der Bibliothek "nucular-keyboard-rescue" zugeordnet.
+Bauteilsymbol "C" wurde der Bibliothek "nucular-keyboard-rescue" zugeordnet.
+Bauteilsymbol "C" wurde der Bibliothek "nucular-keyboard-rescue" zugeordnet.
+Bauteilsymbol "C" wurde der Bibliothek "nucular-keyboard-rescue" zugeordnet.
+Bauteilsymbol "R" wurde der Bibliothek "nucular-keyboard-rescue" zugeordnet.
+Bauteilsymbol "R" wurde der Bibliothek "nucular-keyboard-rescue" zugeordnet.
+Bauteilsymbol "R" wurde der Bibliothek "nucular-keyboard-rescue" zugeordnet.
+Bauteilsymbol "R" wurde der Bibliothek "nucular-keyboard-rescue" zugeordnet.
+Bauteilsymbol "STM32L052R6Tx" wurde der Bibliothek "nucular-keyboard-rescue" zugeordnet.
+Bauteilsymbol "GND" wurde der Bibliothek "power" zugeordnet.
+Bauteilsymbol "GND" wurde der Bibliothek "power" zugeordnet.
+Bauteilsymbol "GND" wurde der Bibliothek "power" zugeordnet.
+Bauteilsymbol "BSS84" wurde der Bibliothek "nucular-keyboard-rescue" zugeordnet.
+Bauteilsymbol "Nexperia_PRTR5V0U2X" wurde der Bibliothek "000-Components" zugeordnet.
+Bauteilsymbol "JAE_KX14-40K2D" wurde der Bibliothek "000-Components" zugeordnet.
+Bauteilsymbol "Microchip_MCP1700T-3302E_MB" wurde der Bibliothek "nucular-keyboard-rescue" zugeordnet.
+Bauteilsymbol "JAE_AA01B-S040VA1" wurde der Bibliothek "000-Components" zugeordnet.
+Hinweis: Kartierung der Bauteilbibliothekstabelle ist fertig gestellt!
