@@ -1,4 +1,4 @@
-update=Fr 08 Mai 2020 23:34:47 CEST
+update=Sa 09 Mai 2020 01:12:54 CEST
 version=1
 last_client=pcbnew
 [cvpcb]
@@ -68,7 +68,7 @@ OthersTextUpright=1
 SolderMaskClearance=0.05
 SolderMaskMinWidth=0
 SolderPasteClearance=0
-SolderPasteRatio=0
+SolderPasteRatio=-0
 [pcbnew/Layer.F.Cu]
 Name=F.Cu
 Type=0
