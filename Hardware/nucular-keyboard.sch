@@ -1,39 +1,5 @@
-EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:stm32
-LIBS:nxp
-LIBS:ir
-LIBS:000-Components
-LIBS:nucular-keyboard-cache
-EELAYER 26 0
+EESchema Schematic File Version 4
+EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
@@ -48,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L VCC #PWR01
+L power:VCC #PWR01
 U 1 1 58F65968
 P 5150 1250
 F 0 "#PWR01" H 5150 1100 50  0001 C CNN
@@ -59,7 +25,7 @@ F 3 "" H 5150 1250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR02
+L power:GND #PWR02
 U 1 1 58F65969
 P 7550 10100
 F 0 "#PWR02" H 7550 9850 50  0001 C CNN
@@ -70,7 +36,7 @@ F 3 "" H 7550 10100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VCC #PWR03
+L power:VCC #PWR03
 U 1 1 58F6596A
 P 5150 9150
 F 0 "#PWR03" H 5150 9000 50  0001 C CNN
@@ -81,29 +47,29 @@ F 3 "" H 5150 9150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C6
+L nucular-keyboard-rescue:C C6
 U 1 1 58F6596C
 P 6200 9600
 F 0 "C6" H 6315 9646 50  0000 L CNN
 F 1 "100n" H 6315 9555 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0402" H 6238 9450 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 6238 9450 50  0001 C CNN
 F 3 "" H 6200 9600 50  0001 C CNN
 	1    6200 9600
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C1
+L nucular-keyboard-rescue:C C1
 U 1 1 58F65970
 P 1450 2550
 F 0 "C1" H 1565 2596 50  0000 L CNN
 F 1 "100n" H 1565 2505 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0402" H 1488 2400 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 1488 2400 50  0001 C CNN
 F 3 "" H 1450 2550 50  0001 C CNN
 	1    1450 2550
 	-1   0    0    -1  
 $EndComp
 $Comp
-L GND #PWR04
+L power:GND #PWR04
 U 1 1 58F65971
 P 1450 2950
 F 0 "#PWR04" H 1450 2700 50  0001 C CNN
@@ -172,7 +138,7 @@ TP4_PWR
 Text Label 8500 4750 0    60   ~ 0
 PWRSWITCH
 $Comp
-L GND #PWR05
+L power:GND #PWR05
 U 1 1 58F65972
 P 2000 2350
 F 0 "#PWR05" H 2000 2100 50  0001 C CNN
@@ -183,7 +149,7 @@ F 3 "" H 2000 2350 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L VCC #PWR06
+L power:VCC #PWR06
 U 1 1 58F65973
 P 2000 2550
 F 0 "#PWR06" H 2000 2400 50  0001 C CNN
@@ -194,7 +160,7 @@ F 3 "" H 2000 2550 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L CONN_01X16 J3
+L nucular-keyboard-rescue:CONN_01X16 J3
 U 1 1 58F65974
 P 11450 6250
 F 0 "J3" H 10850 5400 50  0000 L CNN
@@ -205,7 +171,7 @@ F 3 "" H 11450 6250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_01X03 J4
+L nucular-keyboard-rescue:CONN_01X03 J4
 U 1 1 58F65975
 P 11450 7750
 F 0 "J4" H 10850 7550 50  0000 L CNN
@@ -216,7 +182,7 @@ F 3 "" H 11450 7750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR07
+L power:GND #PWR07
 U 1 1 58F65977
 P 10750 7750
 F 0 "#PWR07" H 10750 7500 50  0001 C CNN
@@ -227,7 +193,7 @@ F 3 "" H 10750 7750 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L GND #PWR08
+L power:GND #PWR08
 U 1 1 58F65978
 P 10600 7000
 F 0 "#PWR08" H 10600 6750 50  0001 C CNN
@@ -238,7 +204,7 @@ F 3 "" H 10600 7000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L GND #PWR09
+L power:GND #PWR09
 U 1 1 58F65979
 P 10600 5800
 F 0 "#PWR09" H 10600 5550 50  0001 C CNN
@@ -249,7 +215,7 @@ F 3 "" H 10600 5800 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L VCC #PWR010
+L power:VCC #PWR010
 U 1 1 58F6597A
 P 10600 6100
 F 0 "#PWR010" H 10600 5950 50  0001 C CNN
@@ -318,7 +284,7 @@ SWDIO
 Text Label 11100 7850 2    60   ~ 0
 SWCLK
 $Comp
-L TEST_1P JPC4
+L nucular-keyboard-rescue:TEST_1P JPC4
 U 1 1 58F6597B
 P 1700 4250
 F 0 "JPC4" V 1700 4550 50  0000 C CNN
@@ -329,7 +295,7 @@ F 3 "" H 1900 4250 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L TEST_1P JPC5
+L nucular-keyboard-rescue:TEST_1P JPC5
 U 1 1 58F6597C
 P 1700 4350
 F 0 "JPC5" V 1700 4650 50  0000 C CNN
@@ -340,7 +306,7 @@ F 3 "" H 1900 4350 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L TEST_1P JPA4
+L nucular-keyboard-rescue:TEST_1P JPA4
 U 1 1 58F6597D
 P 9000 2550
 F 0 "JPA4" V 9000 2850 50  0000 C CNN
@@ -351,7 +317,7 @@ F 3 "" H 9200 2550 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L TEST_1P JPA5
+L nucular-keyboard-rescue:TEST_1P JPA5
 U 1 1 58F6597E
 P 9000 2650
 F 0 "JPA5" V 9000 2950 50  0000 C CNN
@@ -426,7 +392,7 @@ DRV5
 Text Label 10350 1950 2    60   ~ 0
 DRV4
 $Comp
-L GND #PWR011
+L power:GND #PWR011
 U 1 1 58F660E0
 P 11750 4400
 F 0 "#PWR011" H 11750 4150 50  0001 C CNN
@@ -437,7 +403,7 @@ F 3 "" H 11750 4400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VCC #PWR012
+L power:VCC #PWR012
 U 1 1 58F660E1
 P 12400 3650
 F 0 "#PWR012" H 12400 3500 50  0001 C CNN
@@ -480,7 +446,7 @@ DRV5
 Text Label 13400 1950 2    60   ~ 0
 DRV4
 $Comp
-L GND #PWR013
+L power:GND #PWR013
 U 1 1 58F660E2
 P 13600 4400
 F 0 "#PWR013" H 13600 4150 50  0001 C CNN
@@ -527,45 +493,45 @@ TP4_DATA
 Text Label 15000 3850 0    60   ~ 0
 TP4_CLK
 $Comp
-L R R1
+L nucular-keyboard-rescue:R R1
 U 1 1 58F660E4
 P 13850 5900
 F 0 "R1" V 13900 6150 50  0000 C CNN
 F 1 "100R" V 13900 5650 50  0000 C CNN
-F 2 "Resistors_SMD:R_0402" V 13780 5900 50  0001 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 13780 5900 50  0001 C CNN
 F 3 "" H 13850 5900 50  0001 C CNN
 	1    13850 5900
 	0    -1   -1   0   
 $EndComp
 $Comp
-L R R2
+L nucular-keyboard-rescue:R R2
 U 1 1 58F660E5
 P 13850 6000
 F 0 "R2" V 13900 6250 50  0000 C CNN
 F 1 "100R" V 13900 5750 50  0000 C CNN
-F 2 "Resistors_SMD:R_0402" V 13780 6000 50  0001 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 13780 6000 50  0001 C CNN
 F 3 "" H 13850 6000 50  0001 C CNN
 	1    13850 6000
 	0    -1   -1   0   
 $EndComp
 $Comp
-L R R3
+L nucular-keyboard-rescue:R R3
 U 1 1 58F660E6
 P 13850 6100
 F 0 "R3" V 13900 6350 50  0000 C CNN
 F 1 "100R" V 13900 5850 50  0000 C CNN
-F 2 "Resistors_SMD:R_0402" V 13780 6100 50  0001 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 13780 6100 50  0001 C CNN
 F 3 "" H 13850 6100 50  0001 C CNN
 	1    13850 6100
 	0    -1   -1   0   
 $EndComp
 $Comp
-L R R4
+L nucular-keyboard-rescue:R R4
 U 1 1 58F660E7
 P 13850 6200
 F 0 "R4" V 13900 6450 50  0000 C CNN
 F 1 "100R" V 13900 5950 50  0000 C CNN
-F 2 "Resistors_SMD:R_0402" V 13780 6200 50  0001 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 13780 6200 50  0001 C CNN
 F 3 "" H 13850 6200 50  0001 C CNN
 	1    13850 6200
 	0    -1   -1   0   
@@ -595,34 +561,34 @@ LED_POWER_R
 Text Label 11950 2950 0    60   ~ 0
 LED_CAPS_R
 $Comp
-L R R5
+L nucular-keyboard-rescue:R R5
 U 1 1 58F660E8
 P 13950 7350
 F 0 "R5" H 14020 7396 50  0000 L CNN
 F 1 "4k7" H 14020 7305 50  0000 L CNN
-F 2 "Resistors_SMD:R_0402" V 13880 7350 50  0001 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 13880 7350 50  0001 C CNN
 F 3 "" H 13950 7350 50  0001 C CNN
 	1    13950 7350
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R6
+L nucular-keyboard-rescue:R R6
 U 1 1 58F660E9
 P 14400 7350
 F 0 "R6" H 14470 7396 50  0000 L CNN
 F 1 "4k7" H 14470 7305 50  0000 L CNN
-F 2 "Resistors_SMD:R_0402" V 14330 7350 50  0001 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 14330 7350 50  0001 C CNN
 F 3 "" H 14400 7350 50  0001 C CNN
 	1    14400 7350
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R7
+L nucular-keyboard-rescue:R R7
 U 1 1 58F660EA
 P 14800 7350
 F 0 "R7" H 14870 7396 50  0000 L CNN
 F 1 "4k7" H 14870 7305 50  0000 L CNN
-F 2 "Resistors_SMD:R_0402" V 14730 7350 50  0001 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 14730 7350 50  0001 C CNN
 F 3 "" H 14800 7350 50  0001 C CNN
 	1    14800 7350
 	1    0    0    -1  
@@ -634,12 +600,12 @@ TP4_CLK
 Text Label 13550 7900 2    60   ~ 0
 TP4_RESET
 $Comp
-L R R8
+L nucular-keyboard-rescue:R R8
 U 1 1 58F660EC
 P 6400 7850
 F 0 "R8" H 6470 7896 50  0000 L CNN
 F 1 "4k7" H 6470 7805 50  0000 L CNN
-F 2 "Resistors_SMD:R_0402" V 6330 7850 50  0001 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 6330 7850 50  0001 C CNN
 F 3 "" H 6400 7850 50  0001 C CNN
 	1    6400 7850
 	1    0    0    -1  
@@ -647,18 +613,18 @@ $EndComp
 Text Label 5950 8200 2    60   ~ 0
 TP4_PWR
 $Comp
-L C C2
+L nucular-keyboard-rescue:C C2
 U 1 1 58F660EE
 P 7550 7850
 F 0 "C2" H 7665 7896 50  0000 L CNN
 F 1 "100n" H 7665 7805 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0402" H 7588 7700 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 7588 7700 50  0001 C CNN
 F 3 "" H 7550 7850 50  0001 C CNN
 	1    7550 7850
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR014
+L power:GND #PWR014
 U 1 1 58F660EF
 P 7550 8450
 F 0 "#PWR014" H 7550 8200 50  0001 C CNN
@@ -669,7 +635,7 @@ F 3 "" H 7550 8450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR015
+L power:GND #PWR015
 U 1 1 58F668C9
 P 1700 8450
 F 0 "#PWR015" H 1700 8200 50  0001 C CNN
@@ -680,7 +646,7 @@ F 3 "" H 1700 8450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR016
+L power:GND #PWR016
 U 1 1 58F668CA
 P 2850 10100
 F 0 "#PWR016" H 2850 9850 50  0001 C CNN
@@ -691,7 +657,7 @@ F 3 "" H 2850 10100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR017
+L power:GND #PWR017
 U 1 1 58F668CB
 P 3800 10100
 F 0 "#PWR017" H 3800 9850 50  0001 C CNN
@@ -702,7 +668,7 @@ F 3 "" H 3800 10100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR018
+L power:GND #PWR018
 U 1 1 58F668CC
 P 4550 10100
 F 0 "#PWR018" H 4550 9850 50  0001 C CNN
@@ -713,7 +679,7 @@ F 3 "" H 4550 10100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR019
+L power:GND #PWR019
 U 1 1 58F668CD
 P 4450 8600
 F 0 "#PWR019" H 4450 8350 50  0001 C CNN
@@ -724,29 +690,29 @@ F 3 "" H 4450 8600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C3
+L nucular-keyboard-rescue:C C3
 U 1 1 58F668D1
 P 2850 9700
 F 0 "C3" H 2965 9746 50  0000 L CNN
 F 1 "10u" H 2965 9655 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 2888 9550 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2888 9550 50  0001 C CNN
 F 3 "" H 2850 9700 50  0001 C CNN
 	1    2850 9700
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C4
+L nucular-keyboard-rescue:C C4
 U 1 1 58F668D2
 P 4550 9700
 F 0 "C4" H 4665 9746 50  0000 L CNN
 F 1 "10u" H 4665 9655 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 4588 9550 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4588 9550 50  0001 C CNN
 F 3 "" H 4550 9700 50  0001 C CNN
 	1    4550 9700
 	1    0    0    -1  
 $EndComp
 $Comp
-L USB_OTG USB1
+L nucular-keyboard-rescue:USB_OTG USB1
 U 1 1 58F668D5
 P 1700 7700
 F 0 "USB1" H 1755 8167 50  0000 C CNN
@@ -763,45 +729,45 @@ USB_DP
 Text Label 4700 7800 0    60   ~ 0
 USB_DM
 $Comp
-L C C5
+L nucular-keyboard-rescue:C C5
 U 1 1 58F6596B
 P 5750 9600
 F 0 "C5" H 5865 9646 50  0000 L CNN
 F 1 "100n" H 5865 9555 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0402" H 5788 9450 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 5788 9450 50  0001 C CNN
 F 3 "" H 5750 9600 50  0001 C CNN
 	1    5750 9600
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C9
+L nucular-keyboard-rescue:C C9
 U 1 1 58F6596F
 P 7550 9600
 F 0 "C9" H 7665 9646 50  0000 L CNN
 F 1 "100n" H 7665 9555 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0402" H 7588 9450 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 7588 9450 50  0001 C CNN
 F 3 "" H 7550 9600 50  0001 C CNN
 	1    7550 9600
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C8
+L nucular-keyboard-rescue:C C8
 U 1 1 58F6596E
 P 7100 9600
 F 0 "C8" H 7215 9646 50  0000 L CNN
 F 1 "100n" H 7215 9555 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0402" H 7138 9450 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 7138 9450 50  0001 C CNN
 F 3 "" H 7100 9600 50  0001 C CNN
 	1    7100 9600
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C7
+L nucular-keyboard-rescue:C C7
 U 1 1 58F6596D
 P 6650 9600
 F 0 "C7" H 6765 9646 50  0000 L CNN
 F 1 "100n" H 6765 9555 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0402" H 6688 9450 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 6688 9450 50  0001 C CNN
 F 3 "" H 6650 9600 50  0001 C CNN
 	1    6650 9600
 	1    0    0    -1  
@@ -809,45 +775,45 @@ $EndComp
 Text Notes 8900 9900 0    60   ~ 0
 TODO:\n[x] Check Q1 footprint\n[x] Check USB Package \n    is compatible with FCI1018194-0001LF\n[x] SOT143B Package\n[ ] Change 3D Color of voltage reg\n\n[x] VBus Net\n[x] +5V_TP Net\n\n[ ] List ThinkPad Models\n[ ] OSHW-Logo\n[ ] Fill in schematic infos\n[ ] GND Polygon fill\n[ ] Gerber export\n[ ] Pull requests\n[ ] Upload to GitHub\n
 $Comp
-L R R12
+L nucular-keyboard-rescue:R R12
 U 1 1 58FC97E2
 P 13850 5500
 F 0 "R12" V 13900 5750 50  0000 C CNN
 F 1 "100R" V 13900 5250 50  0000 C CNN
-F 2 "Resistors_SMD:R_0402" V 13780 5500 50  0001 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 13780 5500 50  0001 C CNN
 F 3 "" H 13850 5500 50  0001 C CNN
 	1    13850 5500
 	0    -1   -1   0   
 $EndComp
 $Comp
-L R R9
+L nucular-keyboard-rescue:R R9
 U 1 1 58FC97E8
 P 13850 5600
 F 0 "R9" V 13900 5850 50  0000 C CNN
 F 1 "100R" V 13900 5350 50  0000 C CNN
-F 2 "Resistors_SMD:R_0402" V 13780 5600 50  0001 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 13780 5600 50  0001 C CNN
 F 3 "" H 13850 5600 50  0001 C CNN
 	1    13850 5600
 	0    -1   -1   0   
 $EndComp
 $Comp
-L R R10
+L nucular-keyboard-rescue:R R10
 U 1 1 58FC97EE
 P 13850 5700
 F 0 "R10" V 13900 5950 50  0000 C CNN
 F 1 "100R" V 13900 5450 50  0000 C CNN
-F 2 "Resistors_SMD:R_0402" V 13780 5700 50  0001 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 13780 5700 50  0001 C CNN
 F 3 "" H 13850 5700 50  0001 C CNN
 	1    13850 5700
 	0    -1   -1   0   
 $EndComp
 $Comp
-L R R11
+L nucular-keyboard-rescue:R R11
 U 1 1 58FC97F4
 P 13850 5800
 F 0 "R11" V 13900 6050 50  0000 C CNN
 F 1 "100R" V 13900 5550 50  0000 C CNN
-F 2 "Resistors_SMD:R_0402" V 13780 5800 50  0001 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 13780 5800 50  0001 C CNN
 F 3 "" H 13850 5800 50  0001 C CNN
 	1    13850 5800
 	0    -1   -1   0   
@@ -886,7 +852,7 @@ Text Label 13550 6900 2    60   ~ 0
 +5V_TP
 NoConn ~ 2000 7900
 $Comp
-L STM32L052R6Tx IC1
+L nucular-keyboard-rescue:STM32L052R6Tx IC1
 U 1 1 58F65966
 P 5350 3650
 F 0 "IC1" H 2750 5850 50  0000 C CNN
@@ -897,9 +863,9 @@ F 3 "" H 5350 3650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5150 1250 5150 1550
+	5150 1250 5150 1400
 Wire Wire Line
-	5150 1400 5550 1400
+	5150 1400 5250 1400
 Wire Wire Line
 	5550 1400 5550 1550
 Connection ~ 5150 1400
@@ -989,7 +955,7 @@ Wire Wire Line
 Wire Wire Line
 	2350 4550 2200 4550
 Wire Wire Line
-	1200 2150 2350 2150
+	1200 2150 1450 2150
 Wire Wire Line
 	2350 3950 2200 3950
 Wire Wire Line
@@ -1066,7 +1032,7 @@ Connection ~ 1450 2150
 Wire Wire Line
 	10550 1750 10700 1750
 Wire Wire Line
-	10550 1750 10550 4400
+	10550 1750 10550 3550
 Wire Wire Line
 	10700 3550 10550 3550
 Connection ~ 10550 3550
@@ -1112,7 +1078,7 @@ Wire Wire Line
 Wire Wire Line
 	11600 1750 11750 1750
 Wire Wire Line
-	11750 1750 11750 4400
+	11750 1750 11750 3450
 Wire Wire Line
 	11600 3450 11750 3450
 Connection ~ 11750 3450
@@ -1192,7 +1158,7 @@ Wire Wire Line
 Wire Wire Line
 	13400 3450 13750 3450
 Wire Wire Line
-	13600 3550 13600 4400
+	13600 3550 13600 3650
 Wire Wire Line
 	13750 3550 13600 3550
 Wire Wire Line
@@ -1270,7 +1236,7 @@ Wire Wire Line
 Wire Wire Line
 	13950 7200 13950 6900
 Wire Wire Line
-	13550 6900 14800 6900
+	13550 6900 13950 6900
 Wire Wire Line
 	14800 6900 14800 7200
 Wire Wire Line
@@ -1278,9 +1244,9 @@ Wire Wire Line
 Connection ~ 14400 6900
 Connection ~ 13950 6900
 Wire Wire Line
-	2000 7500 6800 7500
+	2000 7500 2850 7500
 Wire Wire Line
-	5950 8200 7000 8200
+	5950 8200 6400 8200
 Wire Wire Line
 	7000 8200 7000 7800
 Wire Wire Line
@@ -1290,18 +1256,18 @@ Wire Wire Line
 	6400 7500 6400 7700
 Connection ~ 6400 7500
 Wire Wire Line
-	7200 7500 7950 7500
+	7200 7500 7550 7500
 Wire Wire Line
 	7550 7500 7550 7700
 Connection ~ 7550 7500
 Wire Wire Line
 	7550 8450 7550 8000
 Wire Wire Line
-	2850 7500 2850 9550
+	2850 7500 2850 8450
 Wire Wire Line
 	2850 9850 2850 10100
 Wire Wire Line
-	4100 9300 7550 9300
+	4100 9300 4550 9300
 Wire Wire Line
 	4550 9550 4550 9300
 Connection ~ 4550 9300
@@ -1312,23 +1278,23 @@ Wire Wire Line
 Wire Wire Line
 	1600 8250 1700 8250
 Wire Wire Line
-	1700 8100 1700 8450
+	1700 8100 1700 8250
 Connection ~ 1700 8250
 Wire Wire Line
-	2000 7800 4700 7800
+	2000 7800 3300 7800
 Wire Wire Line
-	2000 7700 4700 7700
+	2000 7700 4300 7700
 Wire Wire Line
 	4100 8450 4450 8450
 Connection ~ 3300 7800
 Wire Wire Line
 	13400 3750 13750 3750
 Wire Wire Line
-	7550 9750 7550 10100
+	7550 9750 7550 9900
 Wire Wire Line
 	5750 9750 5750 9900
 Wire Wire Line
-	5750 9900 7550 9900
+	5750 9900 6200 9900
 Connection ~ 7550 9900
 Wire Wire Line
 	7100 9750 7100 9900
@@ -1383,9 +1349,9 @@ Wire Wire Line
 Wire Wire Line
 	5150 5750 5150 5950
 Wire Wire Line
-	5150 5950 5550 5950
+	5150 5950 5250 5950
 Wire Wire Line
-	5550 5750 5550 6150
+	5550 5750 5550 5950
 Wire Wire Line
 	5350 5750 5350 5950
 Connection ~ 5350 5950
@@ -1402,10 +1368,10 @@ Wire Wire Line
 	3500 9300 2850 9300
 Connection ~ 2850 9300
 Wire Wire Line
-	14800 1750 14800 4400
+	14800 1750 14800 3450
 Connection ~ 14800 3450
 $Comp
-L GND #PWR020
+L power:GND #PWR020
 U 1 1 58FD8413
 P 14800 4400
 F 0 "#PWR020" H 14800 4150 50  0001 C CNN
@@ -1416,7 +1382,7 @@ F 3 "" H 14800 4400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR021
+L power:GND #PWR021
 U 1 1 58FD8629
 P 5550 6150
 F 0 "#PWR021" H 5550 5900 50  0001 C CNN
@@ -1427,7 +1393,7 @@ F 3 "" H 5550 6150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR022
+L power:GND #PWR022
 U 1 1 58FD9815
 P 10550 4400
 F 0 "#PWR022" H 10550 4150 50  0001 C CNN
@@ -1455,7 +1421,7 @@ VBUS
 Text Label 11100 5500 2    60   ~ 0
 VBUS
 $Comp
-L BSS84 Q1
+L nucular-keyboard-rescue:BSS84 Q1
 U 1 1 58FD4353
 P 7000 7600
 F 0 "Q1" V 7343 7600 50  0000 C CNN
@@ -1466,7 +1432,7 @@ F 3 "" H 7000 7600 50  0001 L CNN
 	0    1    -1   0   
 $EndComp
 $Comp
-L Nexperia_PRTR5V0U2X D1
+L 000-Components:Nexperia_PRTR5V0U2X D1
 U 1 1 59092074
 P 3800 8350
 F 0 "D1" H 3800 7863 60  0000 C CNN
@@ -1477,7 +1443,7 @@ F 3 "" H 3700 8600 60  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L JAE_KX14-40K2D J2
+L 000-Components:JAE_KX14-40K2D J2
 U 1 1 59093E51
 P 14150 2850
 F 0 "J2" H 14200 4237 60  0000 C CNN
@@ -1488,18 +1454,18 @@ F 3 "" H 14200 2750 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Microchip_MCP1700T-3302E/MB U1
+L nucular-keyboard-rescue:Microchip_MCP1700T-3302E_MB U1
 U 1 1 59096F70
 P 3800 9400
 F 0 "U1" H 3800 9767 50  0000 C CNN
 F 1 "MCP1700T-3302E/MB" H 3800 9676 50  0000 C CNN
-F 2 "000-Modules:SOT89-3" H 3800 9050 50  0001 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-89-3" H 3800 9050 50  0001 C CNN
 F 3 "" H 3800 9500 50  0001 C CNN
 	1    3800 9400
 	1    0    0    -1  
 $EndComp
 $Comp
-L JAE_AA01B-S040VA1 J1
+L 000-Components:JAE_AA01B-S040VA1 J1
 U 1 1 59093D6D
 P 11100 2850
 F 0 "J1" H 11150 4237 60  0000 C CNN
@@ -1509,4 +1475,78 @@ F 3 "" H 10400 2900 60  0001 C CNN
 	1    11100 2850
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	5150 1400 5150 1550
+Wire Wire Line
+	5450 1400 5550 1400
+Wire Wire Line
+	5350 1400 5450 1400
+Wire Wire Line
+	5250 1400 5350 1400
+Wire Wire Line
+	1450 2150 2350 2150
+Wire Wire Line
+	10550 3550 10550 4050
+Wire Wire Line
+	10550 4050 10550 4400
+Wire Wire Line
+	11750 3450 11750 4050
+Wire Wire Line
+	11750 4050 11750 4400
+Wire Wire Line
+	13600 3650 13600 4050
+Wire Wire Line
+	13600 4050 13600 4400
+Wire Wire Line
+	14400 6900 14800 6900
+Wire Wire Line
+	13950 6900 14400 6900
+Wire Wire Line
+	6400 8200 7000 8200
+Wire Wire Line
+	6400 7500 6800 7500
+Wire Wire Line
+	7550 7500 7950 7500
+Wire Wire Line
+	4550 9300 5150 9300
+Wire Wire Line
+	1700 8250 1700 8450
+Wire Wire Line
+	3300 7800 4700 7800
+Wire Wire Line
+	7550 9900 7550 10100
+Wire Wire Line
+	7100 9900 7550 9900
+Wire Wire Line
+	6650 9900 7100 9900
+Wire Wire Line
+	6200 9900 6650 9900
+Wire Wire Line
+	5750 9300 6200 9300
+Wire Wire Line
+	7100 9300 7550 9300
+Wire Wire Line
+	6650 9300 7100 9300
+Wire Wire Line
+	6200 9300 6650 9300
+Wire Wire Line
+	5150 9300 5750 9300
+Wire Wire Line
+	5350 5950 5450 5950
+Wire Wire Line
+	5250 5950 5350 5950
+Wire Wire Line
+	5450 5950 5550 5950
+Wire Wire Line
+	5550 5950 5550 6150
+Wire Wire Line
+	2850 9300 2850 9550
+Wire Wire Line
+	14800 3450 14800 4400
+Wire Wire Line
+	4300 7700 4700 7700
+Wire Wire Line
+	2850 8450 2850 9300
+Wire Wire Line
+	2850 7500 6400 7500
 $EndSCHEMATC
