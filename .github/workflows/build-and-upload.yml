@@ -3,50 +3,53 @@ name: Build and Upload Binaries
 on:
   push:
   pull_request:
-  workflow_dispatch: # Allows manual triggering
+  workflow_dispatch:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    # CHANGE HERE: Use an older Ubuntu version
+    runs-on: ubuntu-20.04
 
     steps:
     # Step 1: Checkout the repository
     - name: Checkout Code
       uses: actions/checkout@v4
 
-    # Step 2: Install system dependencies (excluding Python 2)
-    - name: Install System Dependencies
+    # Step 2: Install dependencies including Python 2 via apt
+    - name: Install Dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y make gcc-arm-none-eabi software-properties-common
+        # Needed for add-apt-repository
+        sudo apt-get install -y software-properties-common
+        # Ensure the 'universe' repository is enabled (often is by default on 20.04, but explicit is safer)
+        sudo add-apt-repository universe
+        sudo apt-get update
+        # Install make, gcc, and python2 from apt
+        sudo apt-get install -y make gcc-arm-none-eabi python2
+        # Optional: Create a 'python' symlink if your Makefiles call 'python' instead of 'python2'
+        # sudo ln -sf /usr/bin/python2 /usr/bin/python
 
-    # Step 3: Setup Python 2 using the dedicated action
-    - name: Set up Python 2.7
-      uses: actions/setup-python@v5 # Use the latest major version
-      with:
-        python-version: '2.7' # Specify Python 2.7
-
-    # Step 4: Verify Python version (Optional but recommended)
+    # Step 3: Verify Python version (Optional)
     - name: Verify Python Installation
       run: |
-        python --version # Should output Python 2.7.x
-        which python # Should point to the toolcache directory used by setup-python
+        python2 --version # Check python2 explicitly
+        # If you created the symlink above, you can also check 'python --version'
 
-    # Step 5: Build USB DFU bootloader
+    # Step 4: Build USB DFU bootloader
     - name: Build USB DFU Bootloader
       run: |
         make boot
 
-    # Step 6: Build Keyboard Application
+    # Step 5: Build Keyboard Application
     - name: Build Keyboard Application
       run: |
         make all
 
-    # Step 7: Upload Binaries
+    # Step 6: Upload Binaries
     - name: Upload Binaries
-      uses: actions/upload-artifact@v4 # Use the latest major version
+      uses: actions/upload-artifact@v4
       with:
-        name: binaries
+        name: binaries-ubuntu-20.04 # Optional: Add runner OS to artifact name
         path: |
           obj_boot/f00b00t.hex
           obj_app/nucular_kb.hex
