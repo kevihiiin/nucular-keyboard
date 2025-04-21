@@ -1,0 +1,45 @@
+name: Build and Upload Binaries
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:  # Add this to allow manual triggering
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Checkout the repository
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    # Step 2: Install dependencies
+    - name: Install Dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y make gcc-arm-none-eabi
+
+    # Step 3: Build USB DFU bootloader
+    - name: Build USB DFU Bootloader
+      run: |
+        make boot
+
+    # Step 4: Build Keyboard Application
+    - name: Build Keyboard Application
+      run: |
+        make all
+
+    # Step 5: Upload Binaries
+    - name: Upload Binaries
+      uses: actions/upload-artifact@v3
+      with:
+        name: binaries
+        path: |
+          obj_boot/f00b00t.hex
+          obj_app/nucular_kb.hex
+          obj_app/nucular_kb.dfu
