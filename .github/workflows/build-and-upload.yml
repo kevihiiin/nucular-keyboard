@@ -7,49 +7,47 @@ on:
 
 jobs:
   build:
-    # CHANGE HERE: Use an older Ubuntu version
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest # The host runner can be latest
 
     steps:
     # Step 1: Checkout the repository
     - name: Checkout Code
       uses: actions/checkout@v4
 
-    # Step 2: Install dependencies including Python 2 via apt
-    - name: Install Dependencies
+    # Step 2: Build using Docker
+    - name: Build inside Docker container with Python 2
       run: |
-        sudo apt-get update
-        # Needed for add-apt-repository
-        sudo apt-get install -y software-properties-common
-        # Ensure the 'universe' repository is enabled (often is by default on 20.04, but explicit is safer)
-        sudo add-apt-repository universe
-        sudo apt-get update
-        # Install make, gcc, and python2 from apt
-        sudo apt-get install -y make gcc-arm-none-eabi python2
-        # Optional: Create a 'python' symlink if your Makefiles call 'python' instead of 'python2'
-        # sudo ln -sf /usr/bin/python2 /usr/bin/python
+        # Use an image known to have python2, e.g., ubuntu:20.04, debian:buster
+        # Pull the image first
+        docker pull ubuntu:20.04
 
-    # Step 3: Verify Python version (Optional)
-    - name: Verify Python Installation
-      run: |
-        python2 --version # Check python2 explicitly
-        # If you created the symlink above, you can also check 'python --version'
+        # Run the build commands inside the container
+        # -v $(pwd):/work mounts the current directory (your repo) into /work inside the container
+        # -w /work sets the working directory inside the container
+        docker run --rm \
+          -v $(pwd):/work \
+          -w /work \
+          ubuntu:20.04 \
+          /bin/bash -c " \
+            apt-get update && \
+            apt-get install -y software-properties-common && \
+            add-apt-repository universe && \
+            apt-get update && \
+            apt-get install -y python2 make gcc-arm-none-eabi && \
+            echo '--- Verifying Python ---' && \
+            python2 --version && \
+            echo '--- Building Bootloader ---' && \
+            make boot && \
+            echo '--- Building Application ---' && \
+            make all && \
+            echo '--- Build Complete ---' \
+          "
 
-    # Step 4: Build USB DFU bootloader
-    - name: Build USB DFU Bootloader
-      run: |
-        make boot
-
-    # Step 5: Build Keyboard Application
-    - name: Build Keyboard Application
-      run: |
-        make all
-
-    # Step 6: Upload Binaries
+    # Step 3: Upload Binaries (Binaries are in the workspace checked out in Step 1)
     - name: Upload Binaries
       uses: actions/upload-artifact@v4
       with:
-        name: binaries-ubuntu-20.04 # Optional: Add runner OS to artifact name
+        name: binaries
         path: |
           obj_boot/f00b00t.hex
           obj_app/nucular_kb.hex
