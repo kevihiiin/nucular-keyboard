@@ -12,7 +12,7 @@ jobs:
     steps:
     # Step 1: Checkout the repository
     - name: Checkout Code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     # Step 2: Install dependencies
     - name: Install Dependencies
@@ -32,7 +32,7 @@ jobs:
 
     # Step 5: Upload Binaries
     - name: Upload Binaries
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: binaries
         path: |
