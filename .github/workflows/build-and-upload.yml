@@ -2,11 +2,7 @@ name: Build and Upload Binaries
 
 on:
   push:
-    branches:
-      - main
   pull_request:
-    branches:
-      - main
   workflow_dispatch:  # Add this to allow manual triggering
 
 jobs:
