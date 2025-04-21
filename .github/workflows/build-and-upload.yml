@@ -18,7 +18,7 @@ jobs:
     - name: Install Dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y make gcc-arm-none-eabi
+        sudo apt-get install -y python2 make gcc-arm-none-eabi
 
     # Step 3: Build USB DFU bootloader
     - name: Build USB DFU Bootloader
