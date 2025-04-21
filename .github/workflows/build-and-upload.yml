@@ -1,57 +1,49 @@
-name: Build and Upload All Build Output (Docker) # Updated workflow name
+name: Build and Upload Binaries
 
 on:
   push:
   pull_request:
-  workflow_dispatch: # Allows manual triggering
+  workflow_dispatch:
 
 jobs:
   build:
-    # Use the standard 'ubuntu-latest' runner as the host
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest # The host runner can be latest
 
     steps:
-    # Step 1: Checkout the repository onto the host runner
+    # Step 1: Checkout the repository
     - name: Checkout Code
       uses: actions/checkout@v4
 
-    # Step 2: Build inside a Docker container using Ubuntu 20.04 as base
-    - name: Build inside Docker (Ubuntu 20.04 base)
+    # Step 2: Build using Docker
+    - name: Build inside Docker container with Python 2
       run: |
-        echo "--- Pulling Docker Image ubuntu:20.04 ---"
+        # Use an image known to have python2, e.g., ubuntu:20.04, debian:buster
+        # Pull the image first
         docker pull ubuntu:20.04
 
-        echo "--- Running Build Script inside Docker Container ---"
+        # Run the build commands inside the container
+        # -v $(pwd):/work mounts the current directory (your repo) into /work inside the container
+        # -w /work sets the working directory inside the container
         docker run --rm \
-          -v "${{ github.workspace }}":/work \
+          -v $(pwd):/work \
           -w /work \
           ubuntu:20.04 \
           /bin/bash -c " \
-            echo '+++ [Docker] Updating apt and installing dependencies +++' && \
-            apt-get update > /dev/null && \
-            apt-get install -y --no-install-recommends software-properties-common > /dev/null && \
-            add-apt-repository universe > /dev/null && \
-            apt-get update > /dev/null && \
-            apt-get install -y --no-install-recommends make gcc-arm-none-eabi python2 > /dev/null && \
-            echo '+++ [Docker] Verifying Python Version +++' && \
+            apt-get update && \
+            apt-get install -y software-properties-common && \
+            add-apt-repository universe && \
+            apt-get update && \
+            apt-get install -y python2 make gcc-arm-none-eabi && \
+            echo '--- Verifying Python ---' && \
             python2 --version && \
-            echo '+++ [Docker] Building Bootloader (make boot) +++' && \
+            echo '--- Building Bootloader ---' && \
             make boot && \
-            echo '+++ [Docker] Building Application (make all) +++' && \
+            echo '--- Building Application ---' && \
             make all && \
-            echo '+++ [Docker] Build Complete +++' \
+            echo '--- Build Complete ---' \
           "
 
-    # Step 3: List generated files (Optional Debugging on Host)
-    - name: List generated files in workspace
-      run: |
-        echo "--- Contents of obj_boot on host: ---"
-        ls -lR obj_boot || echo "obj_boot not found or empty"
-        echo "--- Contents of obj_app on host: ---"
-        ls -lR obj_app || echo "obj_app not found or empty"
-
-
-    # Step 4: Upload Entire Build Output Directories as Artifacts
+    # Step 3: Upload Entire Build Output Directories as Artifacts
     - name: Upload Build Output Directories # Updated step name
       uses: actions/upload-artifact@v4
       with:
