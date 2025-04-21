@@ -3,7 +3,7 @@ name: Build and Upload Binaries
 on:
   push:
   pull_request:
-  workflow_dispatch:  # Add this to allow manual triggering
+  workflow_dispatch: # Allows manual triggering
 
 jobs:
   build:
@@ -14,29 +14,37 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v4
 
-    # Step 2: Install dependencies
-    - name: Install Dependencies
+    # Step 2: Install system dependencies (excluding Python 2)
+    - name: Install System Dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y make gcc-arm-none-eabi
-        # Install Python 2 using a custom method
-        sudo apt-get install -y software-properties-common
-        sudo add-apt-repository universe
-        sudo apt-get install -y python2
+        sudo apt-get install -y make gcc-arm-none-eabi software-properties-common
 
-    # Step 3: Build USB DFU bootloader
+    # Step 3: Setup Python 2 using the dedicated action
+    - name: Set up Python 2.7
+      uses: actions/setup-python@v5 # Use the latest major version
+      with:
+        python-version: '2.7' # Specify Python 2.7
+
+    # Step 4: Verify Python version (Optional but recommended)
+    - name: Verify Python Installation
+      run: |
+        python --version # Should output Python 2.7.x
+        which python # Should point to the toolcache directory used by setup-python
+
+    # Step 5: Build USB DFU bootloader
     - name: Build USB DFU Bootloader
       run: |
         make boot
 
-    # Step 4: Build Keyboard Application
+    # Step 6: Build Keyboard Application
     - name: Build Keyboard Application
       run: |
         make all
 
-    # Step 5: Upload Binaries
+    # Step 7: Upload Binaries
     - name: Upload Binaries
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v4 # Use the latest major version
       with:
         name: binaries
         path: |
